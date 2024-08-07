@@ -14,6 +14,7 @@ import { styles } from "./styles"
 import { LinearGradient } from "expo-linear-gradient"
 import { StarIcon } from "../../assets/icons/StarIcon"
 import { theme } from "../../theme/theme"
+import { Icon } from "../../components/Icon"
 
 export function HomeScreen() {
 	return (
@@ -32,7 +33,7 @@ export function HomeScreen() {
 					<View style={styles.bannerInfo}>
 						<Text style={styles.movieName}>Avatar: O Caminho da Água</Text>
 						<View style={styles.averageContainer}>
-							<StarIcon />
+							<Icon name="star" size={20} color="orange" />
 							<Text style={styles.average}>7</Text>
 						</View>
 						<TouchableOpacity style={styles.seeMoreBtn}>

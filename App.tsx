@@ -1,5 +1,11 @@
+import { NavigationContainer } from "@react-navigation/native"
+import { Routes } from "./src/routes/routes"
 import { HomeScreen } from "./src/screens"
 
 export default function App() {
-	return <HomeScreen />
+	return (
+		<NavigationContainer>
+			<Routes />
+		</NavigationContainer>
+	)
 }
