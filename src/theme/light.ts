@@ -1,18 +1,17 @@
 import { borderRadius } from "./borderRadius"
 import { colors } from "./colors"
+import { Theme } from "./dark"
 import { spacings } from "./spacings"
 
-export const dark = {
+export const light: Theme = {
 	borderRadius,
 	spacings,
 	colors: {
 		...colors,
-		background: colors.black,
-		text: colors.white,
+		background: colors.white,
+		text: colors.black,
 		darkText: colors.grey,
-		tabBarBg: colors.black85,
+		tabBarBg: colors.white85,
 	},
-	themeName: "dark",
+	themeName: "light",
 }
-
-export type Theme = typeof dark
