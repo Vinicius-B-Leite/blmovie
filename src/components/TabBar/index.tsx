@@ -1,13 +1,20 @@
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs"
-import { Text, TouchableOpacity, View } from "react-native"
+import { Platform, Text, TouchableOpacity, View } from "react-native"
 import { BlurView } from "expo-blur"
 import { theme } from "../../theme/theme"
 import { dark } from "../../theme/dark"
-import { styles } from "./styles"
+import { styles, tabBarPaddingTop } from "./styles"
+import { responsiveSize } from "../../utils/sizes/responsiveSize"
 
-export function TabBar({ state, descriptors, navigation }: BottomTabBarProps) {
+type Props = BottomTabBarProps & { bottom: number }
+export function TabBar({ state, descriptors, navigation, bottom }: Props) {
 	return (
-		<BlurView intensity={8} style={styles.tabBarContainer}>
+		<BlurView
+			intensity={8}
+			style={[
+				styles.tabBarContainer,
+				{ paddingBottom: Math.max(bottom, tabBarPaddingTop) },
+			]}>
 			{state.routes.map((route, index) => {
 				const { options } = descriptors[route.key]
 
@@ -41,7 +48,7 @@ export function TabBar({ state, descriptors, navigation }: BottomTabBarProps) {
 				}
 
 				const defaultIconProps = {
-					size: 24,
+					size: responsiveSize(24),
 					focused: isFocused,
 					color: isFocused ? dark.colors.text : dark.colors.darkText,
 				}

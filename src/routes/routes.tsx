@@ -5,16 +5,19 @@ import { TabBar } from "../components/TabBar"
 
 import { Icon } from "../components/Icon"
 import { dark } from "../theme/dark"
+import { tabBarIconSize } from "../components/TabBar/styles"
+import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 const Tab = createBottomTabNavigator()
 
 export function Routes() {
+	const { bottom } = useSafeAreaInsets()
 	return (
 		<Tab.Navigator
 			screenOptions={{
 				headerShown: false,
 			}}
-			tabBar={TabBar}>
+			tabBar={(props) => <TabBar bottom={bottom} {...props} />}>
 			<Tab.Screen
 				name="Home"
 				component={HomeScreen}
@@ -23,7 +26,7 @@ export function Routes() {
 					tabBarIcon: ({ color, focused, size }) => (
 						<Icon
 							name="home"
-							size={24}
+							size={tabBarIconSize}
 							color={focused ? "text" : "darkText"}
 						/>
 					),
@@ -37,7 +40,7 @@ export function Routes() {
 					tabBarIcon: ({ color, focused, size }) => (
 						<Icon
 							name="search"
-							size={24}
+							size={tabBarIconSize}
 							color={focused ? "text" : "darkText"}
 						/>
 					),
@@ -51,7 +54,7 @@ export function Routes() {
 					tabBarIcon: ({ color, focused, size }) => (
 						<Icon
 							name="favorite"
-							size={24}
+							size={tabBarIconSize}
 							color={focused ? "text" : "darkText"}
 						/>
 					),
@@ -65,7 +68,7 @@ export function Routes() {
 					tabBarIcon: ({ color, focused, size }) => (
 						<Icon
 							name="settings"
-							size={24}
+							size={tabBarIconSize}
 							color={focused ? "text" : "darkText"}
 						/>
 					),

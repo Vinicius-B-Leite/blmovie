@@ -16,10 +16,18 @@ import { StarIcon } from "../../assets/icons/StarIcon"
 import { theme } from "../../theme/theme"
 import { Icon } from "../../components/Icon"
 
+import { useSafeAreaInsets } from "react-native-safe-area-context"
+import { tabBarPaddingTop, tabBarSize } from "../../components/TabBar/styles"
+
 export function HomeScreen() {
+	const { bottom } = useSafeAreaInsets()
 	return (
 		<ScrollView style={[styles.container]}>
-			<StatusBar barStyle="light-content" translucent />
+			<StatusBar
+				barStyle="light-content"
+				translucent
+				backgroundColor="transparent"
+			/>
 			<ImageBackground
 				source={require("../../assets/avatar.png")}
 				style={styles.image}>
@@ -45,7 +53,12 @@ export function HomeScreen() {
 			<View
 				style={[
 					styles.moviesContainer,
-					{ paddingBottom: Platform.OS === "ios" ? 100 : 0 },
+					{
+						paddingBottom:
+							tabBarSize +
+							Math.max(bottom, tabBarPaddingTop) +
+							theme.spacings.s13x,
+					},
 				]}>
 				<View>
 					<View style={styles.moviesTitleContainer}>
@@ -69,7 +82,9 @@ export function HomeScreen() {
 								/>
 							</Pressable>
 						)}
-						ItemSeparatorComponent={() => <View style={{ width: 18 }} />}
+						ItemSeparatorComponent={() => (
+							<View style={{ width: theme.spacings.s5x }} />
+						)}
 					/>
 				</View>
 
@@ -95,7 +110,9 @@ export function HomeScreen() {
 								/>
 							</Pressable>
 						)}
-						ItemSeparatorComponent={() => <View style={{ width: 18 }} />}
+						ItemSeparatorComponent={() => (
+							<View style={{ width: theme.spacings.s5x }} />
+						)}
 					/>
 				</View>
 			</View>

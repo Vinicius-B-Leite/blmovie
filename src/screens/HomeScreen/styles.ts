@@ -1,5 +1,7 @@
 import { Dimensions, StyleSheet } from "react-native"
 import { theme } from "../../theme/theme"
+import { responsiveSize } from "../../utils/sizes/responsiveSize"
+import { responsiveFontSize } from "../../utils/sizes/responsiveFontSize"
 
 export const styles = StyleSheet.create({
 	container: {
@@ -13,13 +15,13 @@ export const styles = StyleSheet.create({
 	},
 	gradientContainer: {
 		justifyContent: "flex-end",
-		height: 300,
+		height: responsiveSize(300),
 	},
 	bannerInfo: {
 		paddingHorizontal: theme.spacings.s6x,
 	},
 	movieName: {
-		fontSize: 21,
+		fontSize: responsiveFontSize(21),
 		color: theme.colors.white,
 	},
 	averageContainer: {
@@ -29,7 +31,7 @@ export const styles = StyleSheet.create({
 		marginBottom: theme.spacings.s4x,
 	},
 	average: {
-		fontSize: 14,
+		fontSize: responsiveFontSize(14),
 		color: theme.colors.orange,
 	},
 	seeMoreBtn: {
@@ -42,7 +44,7 @@ export const styles = StyleSheet.create({
 	},
 	seeMoreLabel: {
 		color: theme.colors.white,
-		fontSize: 14,
+		fontSize: responsiveFontSize(14),
 	},
 	moviesContainer: {
 		paddingHorizontal: theme.spacings.s6x,
@@ -56,17 +58,17 @@ export const styles = StyleSheet.create({
 		marginBottom: theme.spacings.s3x,
 	},
 	moviesSectionTitle: {
-		fontSize: 18,
+		fontSize: responsiveFontSize(18),
 		color: theme.colors.white,
 		fontWeight: "bold",
 	},
 	moviesSectionRedirect: {
 		color: theme.colors.blue,
-		fontSize: 14,
+		fontSize: responsiveFontSize(14),
 	},
 	movieItemBanner: {
 		borderRadius: theme.borderRadius["b1.5x"],
-		width: 150,
-		height: 250,
+		width: responsiveSize(150),
+		height: responsiveSize(250),
 	},
 })
