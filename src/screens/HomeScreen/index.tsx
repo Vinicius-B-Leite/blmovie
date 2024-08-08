@@ -9,20 +9,20 @@ import {
 	TouchableOpacity,
 	View,
 } from "react-native"
-import { styles } from "./styles"
-import { LinearGradient } from "expo-linear-gradient"
-import { StarIcon } from "../../assets/icons/StarIcon"
-import { theme } from "../../theme/theme"
-import { Icon } from "../../components/Icon"
+import { createStyle } from "./styles"
 
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 import { tabBarPaddingTop, tabBarSize } from "../../components/TabBar/styles"
 
 import { MovieSection } from "./components/MovieSection"
 import { MovieBanner } from "../../components/MovieBanner"
+import { useAppTheme } from "../../hooks/useAppTheme"
 
 export function HomeScreen() {
 	const { bottom } = useSafeAreaInsets()
+	const { theme } = useAppTheme()
+
+	const styles = createStyle(theme)
 	return (
 		<ScrollView style={[styles.container]}>
 			<StatusBar

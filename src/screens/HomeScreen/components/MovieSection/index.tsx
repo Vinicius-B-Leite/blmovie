@@ -1,12 +1,16 @@
 import { FlatList, Image, Pressable, TouchableOpacity, View } from "react-native"
 import { Text } from "../../../../components/Text"
 import { theme } from "../../../../theme/theme"
-import { styles } from "./styles"
+import { createStyle } from "./styles"
+import { useAppTheme } from "../../../../hooks/useAppTheme"
 
 type MovieSectionProps = {
 	title: string
 }
 export function MovieSection({ title }: MovieSectionProps) {
+	const { theme } = useAppTheme()
+	const styles = createStyle(theme)
+
 	return (
 		<View>
 			<View style={styles.moviesTitleContainer}>

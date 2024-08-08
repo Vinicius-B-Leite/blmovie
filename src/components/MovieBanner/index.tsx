@@ -2,14 +2,21 @@ import { ImageBackground, TouchableOpacity, View } from "react-native"
 import { theme } from "../../theme/theme"
 import { Text } from "../Text"
 import { Icon } from "../Icon"
-import { styles } from "./styles"
 import { LinearGradient } from "expo-linear-gradient"
+import { useAppTheme } from "../../hooks/useAppTheme"
+import { createStyle } from "./styles"
 
 export function MovieBanner() {
+	const { toggle, theme } = useAppTheme()
+	const styles = createStyle(theme)
 	return (
 		<ImageBackground source={require("../../assets/avatar.png")} style={styles.image}>
 			<LinearGradient
-				colors={["rgba(0, 0, 0, 0)", theme.colors.black60, theme.colors.black]}
+				colors={[
+					"rgba(0, 0, 0, 0)",
+					theme.colors.black60,
+					theme.colors.background,
+				]}
 				style={styles.gradientContainer}>
 				<View style={styles.bannerInfo}>
 					<Text variant="paragraphLarge">Avatar: O Caminho da Água</Text>
@@ -19,7 +26,7 @@ export function MovieBanner() {
 							7
 						</Text>
 					</View>
-					<TouchableOpacity style={styles.seeMoreBtn}>
+					<TouchableOpacity onPress={toggle} style={styles.seeMoreBtn}>
 						<Text variant="paragraphSmall">Saiba mais</Text>
 					</TouchableOpacity>
 				</View>
