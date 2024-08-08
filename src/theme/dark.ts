@@ -9,3 +9,5 @@ export const dark = {
 		darkText: theme.colors.grey,
 	},
 }
+
+export type Theme = typeof dark

@@ -6,7 +6,6 @@ import {
 	Pressable,
 	ScrollView,
 	StatusBar,
-	Text,
 	TouchableOpacity,
 	View,
 } from "react-native"
@@ -18,6 +17,7 @@ import { Icon } from "../../components/Icon"
 
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 import { tabBarPaddingTop, tabBarSize } from "../../components/TabBar/styles"
+import { Text } from "../../components/Text"
 
 export function HomeScreen() {
 	const { bottom } = useSafeAreaInsets()
@@ -39,13 +39,15 @@ export function HomeScreen() {
 					]}
 					style={styles.gradientContainer}>
 					<View style={styles.bannerInfo}>
-						<Text style={styles.movieName}>Avatar: O Caminho da Água</Text>
+						<Text variant="paragraphLarge">Avatar: O Caminho da Água</Text>
 						<View style={styles.averageContainer}>
 							<Icon name="star" size={20} color="orange" />
-							<Text style={styles.average}>7</Text>
+							<Text variant="paragraphSmall" color="orange">
+								7
+							</Text>
 						</View>
 						<TouchableOpacity style={styles.seeMoreBtn}>
-							<Text style={styles.seeMoreLabel}>Saiba mais</Text>
+							<Text variant="paragraphSmall">Saiba mais</Text>
 						</TouchableOpacity>
 					</View>
 				</LinearGradient>
@@ -62,9 +64,9 @@ export function HomeScreen() {
 				]}>
 				<View>
 					<View style={styles.moviesTitleContainer}>
-						<Text style={styles.moviesSectionTitle}>Mais Populares</Text>
+						<Text variant="titleSmall">Mais Populares</Text>
 						<TouchableOpacity>
-							<Text style={styles.moviesSectionRedirect}>Ver todos</Text>
+							<Text variant="paragraphSmall">Ver todos</Text>
 						</TouchableOpacity>
 					</View>
 					<FlatList
@@ -90,9 +92,9 @@ export function HomeScreen() {
 
 				<View>
 					<View style={styles.moviesTitleContainer}>
-						<Text style={styles.moviesSectionTitle}>Melhor Avaliados</Text>
+						<Text variant="titleSmall">Melhor Avaliados</Text>
 						<TouchableOpacity>
-							<Text style={styles.moviesSectionRedirect}>Ver todos</Text>
+							<Text variant="paragraphSmall">Ver todos</Text>
 						</TouchableOpacity>
 					</View>
 					<FlatList

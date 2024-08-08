@@ -11,6 +11,7 @@ export function TabBar({ state, descriptors, navigation, bottom }: Props) {
 	return (
 		<BlurView
 			intensity={8}
+			experimentalBlurMethod="dimezisBlurView"
 			style={[
 				styles.tabBarContainer,
 				{ paddingBottom: Math.max(bottom, tabBarPaddingTop) },
