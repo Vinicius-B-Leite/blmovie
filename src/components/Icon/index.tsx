@@ -1,6 +1,8 @@
 import { FavoriteIcon } from "../../assets/icons/FavoriteIcon"
 import { GoBackIcon } from "../../assets/icons/GoBackIcon"
 import { HomeIcon } from "../../assets/icons/HomeIcon"
+import { LanguageIcon } from "../../assets/icons/LanguageIcon"
+import { MoonIcon } from "../../assets/icons/MoonIcon"
 import { SearchIcon } from "../../assets/icons/SearchIcon"
 import { SettingsIcon } from "../../assets/icons/SettingsIcon"
 import { StarIcon } from "../../assets/icons/StarIcon"
@@ -22,4 +24,6 @@ export const allIcons = {
 	settings: SettingsIcon,
 	favorite: FavoriteIcon,
 	goBack: GoBackIcon,
+	moon: MoonIcon,
+	language: LanguageIcon,
 }
