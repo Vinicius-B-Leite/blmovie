@@ -1,16 +1,20 @@
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs"
-import { Platform, Text, TouchableOpacity, View } from "react-native"
+import { TouchableOpacity } from "react-native"
 import { BlurView } from "expo-blur"
 
-import { dark } from "../../theme/dark"
-import { createStyle, tabBarPaddingTop } from "./styles"
-import { responsiveSize } from "../../utils/sizes/responsiveSize"
-import { useAppTheme } from "../../hooks/useAppTheme"
+import { createStyle } from "./styles"
+import { useAppTheme } from "@/hooks"
+import { spacings } from "@/theme"
+import { responsiveSize } from "@/utils"
+
+export const tabBarPaddingTop = spacings.s3x
+export const tabBarIconSize = 24
+export const tabBarSize = tabBarPaddingTop + tabBarIconSize
 
 type Props = BottomTabBarProps & { bottom: number }
 export function TabBar({ state, descriptors, navigation, bottom }: Props) {
 	const { theme } = useAppTheme()
-	const styles = createStyle(theme)
+	const styles = createStyle(theme, tabBarPaddingTop)
 	return (
 		<BlurView
 			intensity={8}

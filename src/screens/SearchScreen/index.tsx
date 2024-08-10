@@ -1,13 +1,8 @@
 import { FlatList, Image, View } from "react-native"
 import { createStyle } from "./styles"
-import { useAppTheme } from "../../hooks/useAppTheme"
-import { Text } from "../../components/Text"
-import { GradientHeader } from "../../components/GradientHeader"
-import { responsiveSize } from "../../utils/sizes/responsiveSize"
-import { tabBarPaddingTop, tabBarSize } from "../../components/TabBar/styles"
-import { useSafeAreaInsets } from "react-native-safe-area-context"
-import { Container } from "../../components/Container"
-import { Screen } from "../../components/Screen"
+import { useAppTheme } from "@/hooks"
+import { Container, GradientHeader, Screen, Text } from "@/components"
+import { responsiveSize } from "@/utils"
 
 const data = [
 	{ banner: require("../../assets/avatar.png") },

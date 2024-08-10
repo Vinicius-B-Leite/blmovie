@@ -1,12 +1,8 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
-import { FavoriteScreen, HomeScreen, SearchScreen, SettingsScreen } from "../screens"
 
-import { TabBar } from "../components/TabBar"
-
-import { Icon } from "../components/Icon"
-import { dark } from "../theme/dark"
-import { tabBarIconSize } from "../components/TabBar/styles"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
+import { Icon, TabBar, tabBarIconSize } from "@/components"
+import { FavoriteScreen, HomeScreen, SearchScreen, SettingsScreen } from "@/screens"
 
 const Tab = createBottomTabNavigator()
 

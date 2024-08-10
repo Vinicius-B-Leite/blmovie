@@ -1,10 +1,9 @@
 import { FlatList, Image, View } from "react-native"
-import { Screen } from "../../components/Screen"
-import { GradientHeader } from "../../components/GradientHeader"
-import { useAppTheme } from "../../hooks/useAppTheme"
-import { responsiveSize } from "../../utils/sizes/responsiveSize"
-import { Container } from "../../components/Container"
+
 import { createStyle } from "./styles"
+import { Container, GradientHeader, Screen } from "@/components"
+import { useAppTheme } from "@/hooks"
+import { responsiveSize } from "@/utils"
 
 const data = [
 	{ banner: require("../../assets/avatar.png") },

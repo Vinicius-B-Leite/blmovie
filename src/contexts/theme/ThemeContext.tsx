@@ -1,7 +1,6 @@
 import { createContext, useState } from "react"
-import { Theme } from "../../theme/dark"
-import { dark } from "../../theme/dark"
-import { light } from "../../theme/light"
+
+import { dark, light, Theme } from "@/theme"
 
 type ThemeContext = {
 	theme: Theme
@@ -11,7 +10,7 @@ export const ThemeContext = createContext({} as ThemeContext)
 
 type ThemeProviderProps = React.PropsWithChildren
 export function ThemeProvider({ children }: ThemeProviderProps) {
-	const [theme, setTheme] = useState<Theme>(light)
+	const [theme, setTheme] = useState<Theme>(dark)
 
 	const toggle = () => {
 		setTheme((oldTheme) => (oldTheme.themeName === "dark" ? light : dark))

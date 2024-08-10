@@ -1,9 +1,10 @@
 import { PropsWithChildren } from "react"
 import { StyleProp, View, ViewStyle } from "react-native"
 import { createStyle } from "./styles"
-import { useAppTheme } from "../../hooks/useAppTheme"
+
 import { useSafeAreaInsets } from "react-native-safe-area-context"
-import { tabBarPaddingTop, tabBarSize } from "../TabBar/styles"
+import { tabBarPaddingTop, tabBarSize } from "../TabBar"
+import { useAppTheme } from "@/hooks"
 
 type ContainerProps = PropsWithChildren & {
 	style?: Omit<ViewStyle, "marginTop" | "paddingTop"> & {

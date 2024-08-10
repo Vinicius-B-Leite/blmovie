@@ -1,15 +1,8 @@
 import { StyleSheet } from "react-native"
-import { theme } from "../../theme/theme"
-import { responsiveSize } from "../../utils/sizes/responsiveSize"
-import { Theme } from "../../theme/dark"
-import { spacings } from "../../theme/spacings"
 
-export const tabBarPaddingTop = spacings.s3x
+import { Theme } from "@/theme"
 
-export const tabBarIconSize = 24
-export const tabBarSize = tabBarPaddingTop + tabBarIconSize
-
-export const createStyle = (theme: Theme) =>
+export const createStyle = (theme: Theme, tabBarPaddingTop: number) =>
 	StyleSheet.create({
 		tabBarContainer: {
 			flexDirection: "row",

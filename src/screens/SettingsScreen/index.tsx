@@ -1,11 +1,8 @@
-import { Screen } from "../../components/Screen"
-import { GradientHeader } from "../../components/GradientHeader"
-import { Container } from "../../components/Container"
-import { Text } from "../../components/Text"
-import { useAppTheme } from "../../hooks/useAppTheme"
 import { createStyle } from "./style"
 import { SettingOption } from "./components/SettingOption"
 import { Switch, View } from "react-native"
+import { useAppTheme } from "@/hooks"
+import { Container, GradientHeader, Screen, Text } from "@/components"
 
 export function SettingsScreen() {
 	const { theme, toggle } = useAppTheme()

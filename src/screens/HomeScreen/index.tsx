@@ -1,24 +1,10 @@
-import {
-	FlatList,
-	Image,
-	ImageBackground,
-	Platform,
-	Pressable,
-	ScrollView,
-	StatusBar,
-	TouchableOpacity,
-	View,
-} from "react-native"
+import { StatusBar } from "react-native"
 import { createStyle } from "./styles"
 
 import { useSafeAreaInsets } from "react-native-safe-area-context"
-import { tabBarPaddingTop, tabBarSize } from "../../components/TabBar/styles"
-
+import { useAppTheme } from "@/hooks"
+import { Container, MovieBanner, Screen } from "@/components"
 import { MovieSection } from "./components/MovieSection"
-import { MovieBanner } from "../../components/MovieBanner"
-import { useAppTheme } from "../../hooks/useAppTheme"
-import { Container } from "../../components/Container"
-import { Screen } from "../../components/Screen"
 
 export function HomeScreen() {
 	const { bottom } = useSafeAreaInsets()

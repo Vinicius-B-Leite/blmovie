@@ -1,5 +1,5 @@
 import { LinearGradient } from "expo-linear-gradient"
-import { useAppTheme } from "../../hooks/useAppTheme"
+
 import { createStyle } from "./style"
 import { Pressable, TextInput, TouchableOpacity, View } from "react-native"
 import { Icon } from "../Icon"
@@ -8,6 +8,7 @@ import { Text } from "../Text"
 import { IconProps } from "../Icon/type"
 import { textVariant } from "../Text/variant"
 import { useRef } from "react"
+import { useAppTheme } from "@/hooks"
 
 type GradientHeaderProps = {
 	title?: string

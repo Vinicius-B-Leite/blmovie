@@ -1,6 +1,5 @@
+import { Theme } from "@/theme"
 import { StyleSheet } from "react-native"
-import { Theme } from "../../theme/dark"
-import { textVariant } from "../Text/variant"
 
 export const createStyle = (theme: Theme) =>
 	StyleSheet.create({

@@ -1,10 +1,11 @@
 import { ImageBackground, TouchableOpacity, View } from "react-native"
-import { theme } from "../../theme/theme"
+
 import { Text } from "../Text"
 import { Icon } from "../Icon"
 import { LinearGradient } from "expo-linear-gradient"
-import { useAppTheme } from "../../hooks/useAppTheme"
+
 import { createStyle } from "./styles"
+import { useAppTheme } from "@/hooks"
 
 export function MovieBanner() {
 	const { toggle, theme } = useAppTheme()

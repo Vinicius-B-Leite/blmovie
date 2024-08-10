@@ -1,14 +1,17 @@
-import { FavoriteIcon } from "../../assets/icons/FavoriteIcon"
-import { GoBackIcon } from "../../assets/icons/GoBackIcon"
-import { HomeIcon } from "../../assets/icons/HomeIcon"
-import { LanguageIcon } from "../../assets/icons/LanguageIcon"
-import { MoonIcon } from "../../assets/icons/MoonIcon"
-import { SearchIcon } from "../../assets/icons/SearchIcon"
-import { SettingsIcon } from "../../assets/icons/SettingsIcon"
-import { StarIcon } from "../../assets/icons/StarIcon"
-import { useAppTheme } from "../../hooks/useAppTheme"
+import { useAppTheme } from "@/hooks"
+
 import { responsiveSize } from "../../utils/sizes/responsiveSize"
 import { IconProps } from "./type"
+import {
+	FavoriteIcon,
+	GoBackIcon,
+	HomeIcon,
+	LanguageIcon,
+	MoonIcon,
+	SearchIcon,
+	SettingsIcon,
+	StarIcon,
+} from "@/assets/icons"
 
 export function Icon({ name, size, color }: IconProps) {
 	const IconWrapper = allIcons[name]

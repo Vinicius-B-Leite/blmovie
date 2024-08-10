@@ -1,7 +1,8 @@
 import { PropsWithChildren } from "react"
 import { ScrollView, View } from "react-native"
-import { useAppTheme } from "../../hooks/useAppTheme"
+
 import { createStyle } from "./styles"
+import { useAppTheme } from "@/hooks"
 
 type ScreenProps = PropsWithChildren & {
 	scrollable?: boolean

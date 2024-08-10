@@ -1,8 +1,8 @@
 import { FlatList, Image, Pressable, TouchableOpacity, View } from "react-native"
-import { Text } from "../../../../components/Text"
-import { theme } from "../../../../theme/theme"
+
 import { createStyle } from "./styles"
-import { useAppTheme } from "../../../../hooks/useAppTheme"
+import { useAppTheme } from "@/hooks"
+import { Text } from "@/components"
 
 type MovieSectionProps = {
 	title: string

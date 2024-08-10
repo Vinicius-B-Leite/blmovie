@@ -1,7 +1,7 @@
 import { Text as RNText } from "react-native"
 import { textVariant, TextVariant } from "./variant"
-import { dark, Theme } from "../../theme/dark"
-import { useAppTheme } from "../../hooks/useAppTheme"
+import { Theme } from "@/theme"
+import { useAppTheme } from "@/hooks"
 
 type TextProps = React.PropsWithChildren & {
 	variant: TextVariant

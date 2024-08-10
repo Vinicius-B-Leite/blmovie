@@ -1,9 +1,8 @@
 import { Pressable, View } from "react-native"
-import { useAppTheme } from "../../../../hooks/useAppTheme"
+
 import { createStyle } from "./styles"
-import { IconProps } from "../../../../components/Icon/type"
-import { Icon } from "../../../../components/Icon"
-import { Text } from "../../../../components/Text"
+import { Icon, IconProps, Text } from "@/components"
+import { useAppTheme } from "@/hooks"
 
 type SettingOptionProps = {
 	title: string

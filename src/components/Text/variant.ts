@@ -1,6 +1,5 @@
+import { responsiveFontSize } from "@/utils"
 import { StyleProp, TextStyle } from "react-native"
-import { responsiveFontSize } from "../../utils/sizes/responsiveFontSize"
-import { dark } from "../../theme/dark"
 
 const textsKeys = {
 	titleLarge: "titleLarge",

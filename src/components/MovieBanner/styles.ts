@@ -1,8 +1,6 @@
+import { Theme } from "@/theme"
+import { responsiveFontSize, responsiveSize } from "@/utils"
 import { Dimensions, StyleSheet } from "react-native"
-
-import { responsiveSize } from "../../utils/sizes/responsiveSize"
-import { responsiveFontSize } from "../../utils/sizes/responsiveFontSize"
-import { Theme } from "../../theme/dark"
 
 export const createStyle = (theme: Theme) =>
 	StyleSheet.create({
