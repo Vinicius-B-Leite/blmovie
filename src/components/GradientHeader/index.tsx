@@ -34,10 +34,14 @@ export function GradientHeader({ title, input, goBack }: GradientHeaderProps) {
 			end={[1, 0]}
 			style={[style.container, { paddingTop: theme.spacings.s5x + top }]}>
 			<TouchableOpacity onPress={goBack} style={style.goBackBtn}>
-				<Icon color="text" size={40} name="goBack" />
+				<Icon color="textOposite" size={40} name="goBack" />
 			</TouchableOpacity>
 
-			{title && !input && <Text variant="titleMedium">{title}</Text>}
+			{title && !input && (
+				<Text variant="titleMedium" color="textOposite">
+					{title}
+				</Text>
+			)}
 			{!title && input && (
 				<Pressable
 					style={style.inputContianer}

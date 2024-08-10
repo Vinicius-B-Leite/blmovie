@@ -37,7 +37,9 @@ export function MovieBanner() {
 				]}
 				style={styles.gradientContainer}>
 				<View style={styles.bannerInfo}>
-					<Text variant="paragraphLarge">Avatar: O Caminho da Água</Text>
+					<Text variant="paragraphLarge" color="textOposite">
+						Avatar: O Caminho da Água
+					</Text>
 					<View style={styles.averageContainer}>
 						<Icon name="star" size={20} color="orange" />
 						<Text variant="paragraphSmall" color="orange">

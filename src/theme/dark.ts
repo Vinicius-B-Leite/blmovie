@@ -10,6 +10,7 @@ export const dark = {
 		background: colors.black,
 		secondBg: colors.secondBlack,
 		text: colors.white,
+		textOposite: colors.white,
 		darkText: colors.grey,
 		tabBarBg: colors.black85,
 		contrast: colors.blue,

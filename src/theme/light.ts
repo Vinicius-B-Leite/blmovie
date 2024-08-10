@@ -11,6 +11,7 @@ export const light: Theme = {
 		secondBg: colors.lightGrey,
 		background: colors.white,
 		text: colors.black,
+		textOposite: colors.white,
 		darkText: colors.grey,
 		tabBarBg: colors.white85,
 		contrast: colors.blue,

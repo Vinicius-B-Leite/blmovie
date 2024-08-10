@@ -16,10 +16,7 @@ export const createStyle = (theme: Theme) =>
 		bannerInfo: {
 			paddingHorizontal: theme.spacings.s6x,
 		},
-		movieName: {
-			fontSize: responsiveFontSize(21),
-			color: theme.colors.text,
-		},
+
 		averageContainer: {
 			flexDirection: "row",
 			alignItems: "center",
