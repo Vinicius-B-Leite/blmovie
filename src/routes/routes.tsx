@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
-import { HomeScreen, SettingsScreen } from "../screens"
+import { HomeScreen, SearchScreen, SettingsScreen } from "../screens"
 
 import { TabBar } from "../components/TabBar"
 
@@ -34,7 +34,7 @@ export function Routes() {
 			/>
 			<Tab.Screen
 				name="Search"
-				component={SettingsScreen}
+				component={SearchScreen}
 				options={{
 					tabBarShowLabel: false,
 					tabBarIcon: ({ color, focused, size }) => (

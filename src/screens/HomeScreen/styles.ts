@@ -11,7 +11,6 @@ export const createStyle = (theme: Theme) =>
 			backgroundColor: theme.colors.background,
 		},
 		moviesContainer: {
-			paddingHorizontal: theme.spacings.s6x,
 			marginTop: theme.spacings.s13x,
 			gap: theme.spacings.s8x,
 		},

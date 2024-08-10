@@ -1,4 +1,5 @@
 import { FavoriteIcon } from "../../assets/icons/FavoriteIcon"
+import { GoBackIcon } from "../../assets/icons/GoBackIcon"
 import { HomeIcon } from "../../assets/icons/HomeIcon"
 import { SearchIcon } from "../../assets/icons/SearchIcon"
 import { SettingsIcon } from "../../assets/icons/SettingsIcon"
@@ -20,4 +21,5 @@ export const allIcons = {
 	search: SearchIcon,
 	settings: SettingsIcon,
 	favorite: FavoriteIcon,
+	goBack: GoBackIcon,
 }

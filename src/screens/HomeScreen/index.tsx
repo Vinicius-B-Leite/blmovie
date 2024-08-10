@@ -17,6 +17,7 @@ import { tabBarPaddingTop, tabBarSize } from "../../components/TabBar/styles"
 import { MovieSection } from "./components/MovieSection"
 import { MovieBanner } from "../../components/MovieBanner"
 import { useAppTheme } from "../../hooks/useAppTheme"
+import { Container } from "../../components/Container"
 
 export function HomeScreen() {
 	const { bottom } = useSafeAreaInsets()
@@ -31,19 +32,10 @@ export function HomeScreen() {
 				backgroundColor="transparent"
 			/>
 			<MovieBanner />
-			<View
-				style={[
-					styles.moviesContainer,
-					{
-						paddingBottom:
-							tabBarSize +
-							Math.max(bottom, tabBarPaddingTop) +
-							theme.spacings.s13x,
-					},
-				]}>
+			<Container style={styles.moviesContainer}>
 				<MovieSection title="Melhor Avaliados" />
 				<MovieSection title="Ação" />
-			</View>
+			</Container>
 		</ScrollView>
 	)
 }

@@ -8,6 +8,7 @@ export const dark = {
 	colors: {
 		...colors,
 		background: colors.black,
+		secondBg: colors.secondBlack,
 		text: colors.white,
 		darkText: colors.grey,
 		tabBarBg: colors.black85,
