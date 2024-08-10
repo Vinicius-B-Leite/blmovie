@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
-import { HomeScreen, SearchScreen, SettingsScreen } from "../screens"
+import { FavoriteScreen, HomeScreen, SearchScreen, SettingsScreen } from "../screens"
 
 import { TabBar } from "../components/TabBar"
 
@@ -48,7 +48,7 @@ export function Routes() {
 			/>
 			<Tab.Screen
 				name="Favorite"
-				component={SettingsScreen}
+				component={FavoriteScreen}
 				options={{
 					tabBarShowLabel: false,
 					tabBarIcon: ({ color, focused, size }) => (

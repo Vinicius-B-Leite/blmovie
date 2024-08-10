@@ -18,6 +18,7 @@ import { MovieSection } from "./components/MovieSection"
 import { MovieBanner } from "../../components/MovieBanner"
 import { useAppTheme } from "../../hooks/useAppTheme"
 import { Container } from "../../components/Container"
+import { Screen } from "../../components/Screen"
 
 export function HomeScreen() {
 	const { bottom } = useSafeAreaInsets()
@@ -25,7 +26,7 @@ export function HomeScreen() {
 
 	const styles = createStyle(theme)
 	return (
-		<ScrollView style={[styles.container]}>
+		<Screen scrollable>
 			<StatusBar
 				barStyle="light-content"
 				translucent
@@ -36,6 +37,6 @@ export function HomeScreen() {
 				<MovieSection title="Melhor Avaliados" />
 				<MovieSection title="Ação" />
 			</Container>
-		</ScrollView>
+		</Screen>
 	)
 }
