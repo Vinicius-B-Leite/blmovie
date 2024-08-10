@@ -31,7 +31,7 @@ export const createStyle = (theme: Theme) =>
 			color: theme.colors.orange,
 		},
 		seeMoreBtn: {
-			backgroundColor: theme.colors.blue,
+			backgroundColor: theme.colors.contrast,
 			paddingHorizontal: theme.spacings.s5x,
 			paddingVertical: theme.spacings.s2x,
 			borderRadius: theme.borderRadius.full,

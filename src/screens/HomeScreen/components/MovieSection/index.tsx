@@ -16,7 +16,7 @@ export function MovieSection({ title }: MovieSectionProps) {
 			<View style={styles.moviesTitleContainer}>
 				<Text variant="titleSmall">{title}</Text>
 				<TouchableOpacity>
-					<Text variant="paragraphSmall" color="blue">
+					<Text variant="paragraphSmall" color="contrast">
 						Ver todos
 					</Text>
 				</TouchableOpacity>

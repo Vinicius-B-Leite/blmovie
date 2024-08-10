@@ -8,10 +8,12 @@ export const light: Theme = {
 	spacings,
 	colors: {
 		...colors,
+		secondBg: colors.lightGrey,
 		background: colors.white,
 		text: colors.black,
 		darkText: colors.grey,
 		tabBarBg: colors.white85,
+		contrast: colors.blue,
 	},
 	themeName: "light",
 }

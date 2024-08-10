@@ -6,10 +6,27 @@ import { LinearGradient } from "expo-linear-gradient"
 
 import { createStyle } from "./styles"
 import { useAppTheme } from "@/hooks"
+import React from "react"
+import { getColors } from "react-native-image-colors"
 
 export function MovieBanner() {
-	const { toggle, theme } = useAppTheme()
+	const { toggle, theme, updateContrastColor } = useAppTheme()
 	const styles = createStyle(theme)
+
+	React.useEffect(() => {
+		const url = require("../../assets/avatar.png")
+
+		getColors(url, {
+			fallback: "#228B22",
+			cache: true,
+			key: url,
+		}).then((colors) => {
+			updateContrastColor(
+				colors.platform === "ios" ? colors.primary : colors.vibrant
+			)
+		})
+	}, [])
+
 	return (
 		<ImageBackground source={require("../../assets/avatar.png")} style={styles.image}>
 			<LinearGradient

@@ -12,6 +12,7 @@ export const dark = {
 		text: colors.white,
 		darkText: colors.grey,
 		tabBarBg: colors.black85,
+		contrast: colors.blue,
 	},
 	themeName: "dark",
 }

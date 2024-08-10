@@ -12,7 +12,7 @@ export const createStyle = (theme: Theme) =>
 		},
 
 		moviesSectionRedirect: {
-			color: theme.colors.blue,
+			color: theme.colors.contrast,
 			fontSize: responsiveFontSize(14),
 		},
 		movieItemBanner: {

@@ -28,7 +28,7 @@ export function SettingsScreen() {
 							<Switch
 								onChange={toggle}
 								value={theme.themeName === "dark"}
-								thumbColor={theme.colors.blue}
+								thumbColor={theme.colors.contrast}
 								trackColor={{
 									false: theme.colors.secondBg,
 									true: theme.colors.secondBg,

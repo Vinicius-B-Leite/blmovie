@@ -29,7 +29,7 @@ export function GradientHeader({ title, input, goBack }: GradientHeaderProps) {
 
 	return (
 		<LinearGradient
-			colors={[theme.colors.black, theme.colors.blue]}
+			colors={[theme.colors.black, theme.colors.contrast]}
 			start={[0, 1]}
 			end={[1, 0]}
 			style={[style.container, { paddingTop: theme.spacings.s5x + top }]}>
