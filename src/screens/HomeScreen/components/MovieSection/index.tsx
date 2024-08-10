@@ -6,8 +6,9 @@ import { Text } from "@/components"
 
 type MovieSectionProps = {
 	title: string
+	onMoviePress: (props: { id: string }) => void
 }
-export function MovieSection({ title }: MovieSectionProps) {
+export function MovieSection({ title, onMoviePress }: MovieSectionProps) {
 	const { theme } = useAppTheme()
 	const styles = createStyle(theme)
 
@@ -29,7 +30,7 @@ export function MovieSection({ title }: MovieSectionProps) {
 				]}
 				horizontal
 				renderItem={({ item }) => (
-					<Pressable style={undefined}>
+					<Pressable onPress={() => onMoviePress({ id: String(item.id) })}>
 						<Image source={item.banner} style={styles.movieItemBanner} />
 					</Pressable>
 				)}

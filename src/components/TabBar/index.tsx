@@ -61,6 +61,10 @@ export function TabBar({ state, descriptors, navigation, bottom }: Props) {
 					color: isFocused ? theme.colors.text : theme.colors.darkText,
 				}
 
+				if (route.name === "MovieDetails") {
+					return null
+				}
+
 				return (
 					<TouchableOpacity
 						key={index}

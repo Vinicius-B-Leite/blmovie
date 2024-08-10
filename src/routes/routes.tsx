@@ -2,9 +2,16 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 import { Icon, TabBar, tabBarIconSize } from "@/components"
-import { FavoriteScreen, HomeScreen, SearchScreen, SettingsScreen } from "@/screens"
+import {
+	FavoriteScreen,
+	HomeScreen,
+	MovieDetailsScreen,
+	SearchScreen,
+	SettingsScreen,
+} from "@/screens"
+import { RoutesTypes } from "./types"
 
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator<RoutesTypes>()
 
 export function Routes() {
 	const { bottom } = useSafeAreaInsets()
@@ -68,6 +75,14 @@ export function Routes() {
 							color={focused ? "text" : "darkText"}
 						/>
 					),
+				}}
+			/>
+			<Tab.Screen
+				name="MovieDetails"
+				component={MovieDetailsScreen}
+				options={{
+					tabBarShowLabel: false,
+					tabBarButton: () => null,
 				}}
 			/>
 		</Tab.Navigator>

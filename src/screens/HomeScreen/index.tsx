@@ -1,16 +1,16 @@
 import { StatusBar } from "react-native"
 import { createStyle } from "./styles"
 
-import { useSafeAreaInsets } from "react-native-safe-area-context"
 import { useAppTheme } from "@/hooks"
 import { Container, MovieBanner, Screen } from "@/components"
 import { MovieSection } from "./components/MovieSection"
+import { useHome } from "./useHome"
 
 export function HomeScreen() {
-	const { bottom } = useSafeAreaInsets()
+	const { handleNavigateToMovieDetails } = useHome()
 	const { theme } = useAppTheme()
-
 	const styles = createStyle(theme)
+
 	return (
 		<Screen scrollable>
 			<StatusBar
@@ -20,8 +20,11 @@ export function HomeScreen() {
 			/>
 			<MovieBanner />
 			<Container style={styles.moviesContainer}>
-				<MovieSection title="Melhor Avaliados" />
-				<MovieSection title="Ação" />
+				<MovieSection
+					title="Melhor Avaliados"
+					onMoviePress={handleNavigateToMovieDetails}
+				/>
+				<MovieSection title="Ação" onMoviePress={handleNavigateToMovieDetails} />
 			</Container>
 		</Screen>
 	)
