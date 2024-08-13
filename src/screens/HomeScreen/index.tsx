@@ -13,12 +13,17 @@ export function HomeScreen() {
 
 	return (
 		<Screen scrollable>
-			<StatusBar
-				barStyle="light-content"
-				translucent
-				backgroundColor="transparent"
-			/>
-			<MovieBanner />
+			<MovieBanner.ImageContainer>
+				<MovieBanner.GradientContainer>
+					<MovieBanner.Content>
+						<MovieBanner.MovieName name="Avatar: O Caminho da Água" />
+						<MovieBanner.Average average={4.5} />
+						<MovieBanner.Button onPress={() => {}}>
+							Saiba mais
+						</MovieBanner.Button>
+					</MovieBanner.Content>
+				</MovieBanner.GradientContainer>
+			</MovieBanner.ImageContainer>
 			<Container style={styles.moviesContainer}>
 				<MovieSection
 					title="Melhor Avaliados"

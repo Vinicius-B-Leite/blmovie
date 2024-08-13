@@ -12,6 +12,7 @@ import {
 	SettingsIcon,
 	StarIcon,
 } from "@/assets/icons"
+import { LeftIcon } from "@/assets/icons/LeftIcon"
 
 export function Icon({ name, size, color }: IconProps) {
 	const IconWrapper = allIcons[name]
@@ -29,4 +30,5 @@ export const allIcons = {
 	goBack: GoBackIcon,
 	moon: MoonIcon,
 	language: LanguageIcon,
+	left: LeftIcon,
 }

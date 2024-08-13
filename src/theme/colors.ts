@@ -5,6 +5,7 @@ export const colors = {
 	black85: "rgba(26, 26, 26, 0.85)",
 	white: "#fff",
 	white85: "rgba(223, 223, 223, 0.85)",
+	white50: "rgba(225, 225, 225, 0.5)",
 	grey: "#9A9A9A",
 	lightGrey: "#E1E1E1",
 	orange: "#FF8800",
