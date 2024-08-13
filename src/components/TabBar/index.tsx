@@ -15,6 +15,8 @@ type Props = BottomTabBarProps & { bottom: number }
 export function TabBar({ state, descriptors, navigation, bottom }: Props) {
 	const { theme } = useAppTheme()
 	const styles = createStyle(theme, tabBarPaddingTop)
+	if (state.index == 4) return
+
 	return (
 		<BlurView
 			intensity={8}

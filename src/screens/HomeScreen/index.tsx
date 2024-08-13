@@ -18,7 +18,8 @@ export function HomeScreen() {
 					<MovieBanner.Content>
 						<MovieBanner.MovieName name="Avatar: O Caminho da Água" />
 						<MovieBanner.Average average={4.5} />
-						<MovieBanner.Button onPress={() => {}}>
+						<MovieBanner.Button
+							onPress={() => handleNavigateToMovieDetails({ id: "id" })}>
 							Saiba mais
 						</MovieBanner.Button>
 					</MovieBanner.Content>

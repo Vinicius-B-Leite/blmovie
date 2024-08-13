@@ -15,6 +15,6 @@ export const createStyle = (theme: Theme) =>
 			alignItems: "center",
 			width: responsiveSize(40),
 			height: responsiveSize(40),
-			borderWidth: 2,
+			borderWidth: 1.5,
 		},
 	})
