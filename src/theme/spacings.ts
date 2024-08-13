@@ -9,6 +9,7 @@ export const spacings = {
 	s6x: responsiveSize(24),
 	s7x: responsiveSize(28),
 	s8x: responsiveSize(32),
+	s10x: responsiveSize(40),
 	s11x: responsiveSize(44),
 	s13x: responsiveSize(52),
 }
