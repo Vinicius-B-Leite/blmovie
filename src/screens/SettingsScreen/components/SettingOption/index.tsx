@@ -20,7 +20,7 @@ export function SettingOption({
 	const { theme } = useAppTheme()
 	const style = createStyle(theme)
 	return (
-		<Pressable style={style.container}>
+		<Pressable onPress={onPress} style={style.container}>
 			<View style={style.left}>
 				<Icon {...leftIcon} />
 				<Text variant="paragraphMedium">{title}</Text>

@@ -6,13 +6,14 @@ import { useAppTheme } from "@/hooks"
 type TextProps = React.PropsWithChildren & {
 	variant: TextVariant
 	color?: keyof Theme["colors"]
-	textProps?: RNTextProps
+	textProps?: Omit<RNTextProps, "style">
+	style?: RNTextProps["style"]
 }
-export function Text({ variant, children, color = "text", textProps }: TextProps) {
+export function Text({ variant, children, color = "text", textProps, style }: TextProps) {
 	const { theme } = useAppTheme()
 	return (
 		<RNText
-			style={[textVariant[variant], { color: theme.colors[color] }]}
+			style={[textVariant[variant], { color: theme.colors[color] }, style]}
 			{...textProps}>
 			{children}
 		</RNText>

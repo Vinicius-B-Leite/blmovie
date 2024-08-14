@@ -3,10 +3,14 @@ import { SettingOption } from "./components/SettingOption"
 import { Switch, View } from "react-native"
 import { useAppTheme } from "@/hooks"
 import { Container, GradientHeader, Screen, Text } from "@/components"
+import { LanguageModal } from "./components/LanguageModal"
+import { useState } from "react"
 
 export function SettingsScreen() {
 	const { theme, toggle } = useAppTheme()
 	const style = createStyle(theme)
+
+	const [isModalVisible, setIsModalVisible] = useState(false)
 
 	return (
 		<Screen scrollable>
@@ -43,7 +47,7 @@ export function SettingsScreen() {
 							size: 30,
 							name: "language",
 						}}
-						onPress={() => {}}
+						onPress={() => setIsModalVisible(true)}
 						rightComponent={
 							<View>
 								<Text variant="paragraphSmall">pt-br</Text>
@@ -52,6 +56,12 @@ export function SettingsScreen() {
 					/>
 				</View>
 			</Container>
+
+			<LanguageModal
+				selectedLanguage="pt-br"
+				isVisible={isModalVisible}
+				onRequestClose={() => setIsModalVisible(false)}
+			/>
 		</Screen>
 	)
 }
