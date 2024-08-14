@@ -6,8 +6,7 @@ import { createStyle } from "./styles"
 import { useState } from "react"
 import { VideosTab } from "./components/VideosTab"
 import { TabBar } from "./components/TabBar"
-
-const SecondRoute = () => <View style={{ flex: 1, backgroundColor: "#673ab7" }} />
+import { ActorTab } from "./components/ActorTab"
 
 export function MovieDetailsScreen() {
 	const { handleGoBack } = useMovieDetails()
@@ -22,6 +21,7 @@ export function MovieDetailsScreen() {
 				<MovieBanner.Heading
 					onPressBack={handleGoBack}
 					onPressFavorite={() => {}}
+					isFavorite
 				/>
 				<MovieBanner.GradientContainer>
 					<MovieBanner.Content>
@@ -48,7 +48,7 @@ export function MovieDetailsScreen() {
 					activeIndex={index}
 					FirstRoute={VideosTab}
 					onChangeTab={setIndex}
-					SecondRoute={SecondRoute}
+					SecondRoute={ActorTab}
 				/>
 			</Container>
 		</Screen>

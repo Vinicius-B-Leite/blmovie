@@ -3,15 +3,35 @@ import { useAppTheme } from "@/hooks"
 import { TouchableOpacity, View } from "react-native"
 import { createStyle } from "./styles"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
+import { Theme } from "@/theme"
 
 type HeadingProps = {
 	onPressBack: () => void
 	onPressFavorite: () => void
+	isFavorite?: boolean
 }
-export function Heading({ onPressBack, onPressFavorite }: HeadingProps) {
+export function Heading({
+	onPressBack,
+	onPressFavorite,
+	isFavorite = false,
+}: HeadingProps) {
 	const { theme } = useAppTheme()
 	const { top } = useSafeAreaInsets()
 	const styles = createStyle(theme)
+
+	const handleColorFavorite = () => {
+		let backgroundColor: keyof Theme["colors"] = "black85"
+		let borderColor: keyof Theme["colors"] = "contrast"
+		let iconColor: keyof Theme["colors"] = "contrast"
+
+		if (isFavorite) {
+			backgroundColor = "contrast"
+			borderColor = "text"
+			iconColor = "text"
+		}
+
+		return { backgroundColor, borderColor, iconColor }
+	}
 
 	return (
 		<View
@@ -30,11 +50,12 @@ export function Heading({ onPressBack, onPressFavorite }: HeadingProps) {
 				style={[
 					styles.genericButton,
 					{
-						borderColor: theme.colors.contrast,
-						backgroundColor: theme.colors.background,
+						borderColor: theme.colors[handleColorFavorite().borderColor],
+						backgroundColor:
+							theme.colors[handleColorFavorite().backgroundColor],
 					},
 				]}>
-				<Icon name="favorite" size={20} color="contrast" />
+				<Icon name="favorite" size={20} color={handleColorFavorite().iconColor} />
 			</TouchableOpacity>
 		</View>
 	)
